@@ -3,14 +3,15 @@
 
 Запустим Bash в новом пространстве
 
-  sudo unshare -pf -n --mount-proc bash
+    sudo unshare -pf -n --mount-proc bash
   
  
  ![1 1](https://github.com/vladislavkrutov8/Containerization-Seminar_1/assets/110223646/4528fb06-a40e-4605-9b7c-e94fc81db480)
 
 
 В параллельном терминале смотрим вводим команду ps -afx и сравниваем изменения 
-    ps -afx
+
+      ps -afx
     
 ![3 3](https://github.com/vladislavkrutov8/Containerization-Seminar_1/assets/110223646/f7fdd8dc-e0a8-4ce6-af06-c2e96629b2f7)
 
@@ -49,13 +50,15 @@ hostname
 
 Как мы можем заметить - хоcт и там и там одинаков. А теперь, в изолированном терминале выполняем команду:
 
-  sudo unshare -u bash
+
+    sudo unshare -u bash
   
 Команда $ unshare запускает программу (опционально) в новом namespace. Флаг -u говорит ей запустить bash в новом UTS namespace. Обратите внимание, что наш новый процесс bash указывает на другой файл UTS, тогда как все остальные остаются прежними.
 
 Теперь мы можем изменить системный hostname из нашего нового процесса bash и это не повлияет ни на какой другой процесс в системе. Изменим наш хост в изолированном терминале, например:
 
-  hostname geekbrains
+
+    hostname geekbrains
 
 Эта команда никак не затронула хост основной системы. Можем проверить это, выполнив hostname в первом терминале и увидев, что имя хоста там не изменилось.
 
