@@ -59,7 +59,7 @@ hostname
 
 Эта команда никак не затронула хост основной системы. Можем проверить это, выполнив hostname в первом терминале и увидев, что имя хоста там не изменилось.
 
-![image](https://github.com/vladislavkrutov8/Containerization-Seminar_1/assets/110223646/6a9423bf-9ae4-426a-b56c-be7c8c950c7e)
+
 
 
 ![new_хост](https://github.com/vladislavkrutov8/Containerization-Seminar_1/assets/110223646/a308de35-8462-4129-92fc-a52f77634d90)
